@@ -1,0 +1,40 @@
+#Container{
+    color: aliceblue;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ser{
+    color: aqua;
+}
+.rectangle{
+    margin: 20px;
+    width: 960px;
+    text-align: center;
+}
+body{
+    background-color: #353434;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: default;
+}
+a:link{
+  color: #ffffff;
+  text-decoration: none;
+}
+a:visited{
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover{
+  color: #ffe100;
+  text-decoration: none;
+}
+/*padding: 20px;
+text-align: center;
+font-size: 18px;
+font-style: italic;
+font-weight: 400;
+font-weight: 700;*/
