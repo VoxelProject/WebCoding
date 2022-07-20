@@ -1,0 +1,119 @@
+body{
+  background-color: #209797;   
+  font-family: 'Lato', sans-serif;
+}
+#Container{
+  /*background-color: white;*/
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4133;
+}
+#logo{
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 44px;
+  letter-spacing: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 900;
+}
+#bar{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#sidebar{
+  font-family: 'Roboto Condensed', sans-serif;
+  float: left;
+  width: 148px;
+  height: 1000px;
+  padding: 20px;
+  background-color: #004852;
+  text-align: center;
+  font-size: 18px;
+  border-right: 2px dotted white;
+}
+#content{
+  float: left;
+  padding: 40px;
+  width: 730px;
+  background-color: #057077;
+  min-height: 580px;
+  text-align: justify;
+  color: white;
+}
+#footer{
+  clear: both;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+#stopka{
+  float: right;
+  padding: 15px;
+  font-size: 18px;
+  border-top: 2px dotted white;
+  width: 780px;
+  height: 24px;
+  background-color: #004852;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+}
+a:link{
+  color: #fbff00;
+}
+a:visited{
+  color: #eeff00;
+}
+a:hover{
+  color: #ff8800;
+}
+.optionl{
+  font-size: 18px;
+  height: 25px;
+  padding: 10px;
+  border-bottom: 2px dotted #ffffff;
+  color: #ffffff;
+}
+.optionl:hover{
+  background-color: #f36742;
+  color: white;
+  cursor: pointer;
+}
+.optione{
+  font-size: 18px;
+  height: 25px;
+  padding: 10px;
+  border-bottom: 2px dotted #ffffff;
+  border-top: 2px dotted #ffffff;
+  border-left: 2px dotted #fffcfc;
+  border-right: 2px dotted #ffffff;
+  background-color: #3b2e1c;
+  color: white;
+}
+.optione:hover{
+  background-color: #f36742;
+  color: white;
+  cursor: pointer;
+}
+.bigtitle{
+  font-family: 'Oswald', sans-serif;
+  font-size: 600;
+  font-size: 60px;
+  color: white;
+}
+.doted{
+  height: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px dotted #ffffff;
+}
+.ub{
+  font-family: 'Oswald', sans-serif;
+  font-size: 600;
+  font-size: 100px;
+  color: white;
+}

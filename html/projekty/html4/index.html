@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Do you like me?</title>
+        <meta name="description" content="Ta stroma opowiada o like me. Skusisz sie i przeczytasz?"/>
+        <meta name="keywords" content="Super Tagi, Likeme"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link rel="stylesheet" href="index.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            .scrollup{
+            width: 64px;
+            height: 64px;
+            text-decoration: none;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            display: none;
+            background-image: url(img/template.png);
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="jquery.scrollTo.min.js"></script>
+        <script>
+            jQuery(function($) {
+                $.scrollTo(0);
+                $('#link3').click(function() {
+                    $.scrollTo($('#maskicrt'), 1000);
+                });
+                $('.scrollup').click(function() {
+                    $.scrollTo($('body'), 1000);
+                });
+                $('#link2').click(function() {
+                    $.scrollTo($('#budowacrt'), 1000);
+                });
+                $('#link1').click(function() {
+                    $.scrollTo($('#zasadacrt'), 1000);
+                });
+            });
+            $(window).scroll(function(){
+                if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+                else $('.scrollup').fadeOut();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="logo">Wykład #1 Monitory Komputerowe</div>
+        <div id="content">
+            <a href="#" class="scrollup"></a>
+            <div id="spis">
+                <ol>
+                    <li>
+                        Monitory kineskopowe CRT
+                        <ul>
+                            <li><a id="link2" href="#">Budowa monitora</a></li>
+                            <li><a id="link1" href="#">Zasada działania</a></li>
+                            <li><a id="link3" href="#">Maska. Rodzaje masek</a></li>
+                            <li><a href="#">Wady i zalety</a></li>
+                            <li><a href="#">Dobór parametrów</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Monitory ciekłokrystaliczne LCD
+                        <ul>
+                            <li><a href="#">Budowa monitora</a></li>
+                            <li><a href="#">Zasada działania</a></li>
+                            <li><a href="#">Podział matryc</a></li>
+                            <li><a href="#">Wady i zalety</a></li>
+                            <li><a href="#">Dobór parametrów</a></li>                       
+                        </ul>
+                    </li>
+                    <li>
+                        Sposoby podłączenia monitorów
+                        <ul>
+                            <li><a href="#">DSUB</a></li>
+                            <li><a href="#">DVI</a></li>
+                            <li><a href="#">HDMI, Display Port</a></li>
+                        </ul>
+                    </li> 
+                    <li>
+                        Dodatkowe informacje
+                        <ul>
+                            <li><a href="#">Przyszłość monitorów i wyświetlaczy?</a></li>
+                            <li><a href="#">Wykorzystane źródła</a></li>
+                        </ul>
+                    </li>                 
+                </ol>
+            </div>
+            <div class="slajd">
+         
+                <h1 id="budowacrt">Budowa monitora CRT</h1>
+                 
+                CRT to akronim od <strong>Cathode-Ray Tube</strong>, czyli lampy kineskopowej wyposażonej w działo elektronowe. W języku polskim pod tym słowem przyjęto potoczną nazwę skrótową, synonim dla wyrażenia monitor CRT – czyli oznaczenie modeli monitorów komputerowych, których wyświetlacz oparty jest na lampie obrazowej zwanej kineskopem. Właściwe określenie to monitor kineskopowy.
+                <br /><br />
+                 
+                <div style="float:left; width:480px; padding-left:20px;">
+                    <img src="img/budowa-crt.png" alt="crt" />
+                </div>
+                <div style="float:left; width:280px; text-align:left;">
+                    [1] lampa katodowa (kineskopowa) w formie szklanej próżniowej tuby<br /><br />
+                    [2] działa elektronowe wraz z układami skupiającymi wiązki<br /><br />
+                    [3] wiązki elektronów<br /><br />
+                    [4] cewka odchylająca<br /><br />
+                    [5] luminofor<br /><br />
+                    [6] maska<br /><br />
+                    [7] anoda
+                </div>
+                <div style="clear:both;"></div>
+     
+            </div>
+             
+            <!-- ######################## SLAJD 1.2 ######################## -->
+             
+            <div class="slajd">
+             
+                <h1 id="zasadacrt">Zasada działania monitora CRT</h1>
+                 
+                Zasada tworzenia obrazu w kolorowym monitorze CRT polega na wysyłaniu w kierunku przedniej szyby powleczonej warstwą luminoforu, <strong>trzech wiązek elektronów</strong> (po jednej dla każdego składowego koloru RGB) za pomocą trzech dział elektronowych umieszczonych w tylnej części próżniowej tuby kineskopu. Wiązki te są kierowane za pomocą silnego pola magnetycznego (<strong>cewki odchylające</strong>) tak, aby trafiały w odpowiedni obszar na luminoforze.
+                <br /><br />
+                <strong>Luminofor jest to świecący pigment (fosfor)</strong>, materiał mający własności świecenia pod wpływem padającego nań promieniowania. Tworząc obraz wiązki przemiatają ekran wzdłuż pojedynczej poziomej linii, zwanej linią wybierania, od lewej do prawej, rozświetlając punkty luminoforu i powodując ich jaśniejsze bądź ciemniejsze świecenie, w zależności od chwilowego napięcia sterującego działem elektronowym.
+                <br /><br />
+                 
+                <div style="width:790px; background-color:#314004;padding:5px;font-weight:700;color:#fff;">
+                    Częstotliwość pozioma
+                </div>
+                <div style="width:790px; background-color:#dedede; padding:5px;">
+                    częstotliwość z jaką monitor rysuje pojedynczą linię obrazu, mierzona w kilohercach [kHz]
+                </div>    
+                 
+                <br />            
+                Po narysowaniu linii obrazu i osiągnięciu prawego brzegu ekranu wiązki są chwilowo wygaszane, po czym cewki odchylające kierują je na początek następnej linii ku dołowi ekranu i proces następuje od nowa, aż do zapełnienia całego ekranu linia po linii. Gdy cały ekran się zapełni, wiązki znowu zostają wygaszone, po czym cały cykl rysowania obrazu zaczyna się od nowa od góry ekranu (od pierwszej linii).
+                <br /><br />
+                 
+                <div style="width:790px; background-color:#314004;padding:5px;font-weight:700;color:#fff;">
+                    Częstotliwość odświeżania (pionowa)
+                </div>
+                <div style="width:790px; background-color:#dedede;padding:5px;">
+                    częstotliwość z jaką monitor rysuje cały ekran (wszystkie linie obrazu) - podawana w hercach [Hz]. Aby uniknąć migotania ekranu i zmęczenia oczu, obraz w pionie powinien być rysowany 85 razy w ciągu sekundy (częstotliwość odświeżania 85 Hz)
+                </div>
+                 
+            </div>
+             
+            <!-- ######################## SLAJD 1.3 ######################## -->
+             
+            <div class="slajd">
+             
+                <h1 id="maskicrt">Rodzaje masek w monitorach CRT</h1>
+                 
+                Przed warstwą luminoforu znajduje się tzw. <strong>maska</strong> (ang. shadow mask), która pełni funkcję filtru dbającego o to, aby elektrony uderzały idealnie w powierzchnię wyznaczonych pól luminoforu (subpikseli) - co pozytywnie wpływa na jakość obrazu.
+                <br /><br />
+                 
+                <div style="width:265px; float:left; text-align:center; font-size:14px;">
+                    <img src="img/maska1.png" alt="maska1" />
+                    <br />perforowana (IBM Delta)
+                </div>
+                <div style="width:260px; float:left; text-align:center; font-size:14px;">
+                    <img src="img/maska2.png" alt="maska2" />
+                    <br />szczelinowa<br />(Trinitron, Diamondtron)
+                </div>
+                <div style="width:265px; float:left; text-align:center; font-size:14px;">
+                    <img src="img/maska3.png" alt="maska3" />
+                    <br />szczelinowo-perforowana<br />(NEC Cromaclear)
+                </div>
+                <div style="clear:both;"></div>
+                 
+                <br />
+                 
+                <div style="width:790px; background-color:#314004;padding:5px;font-weight:700;color:#fff;">
+                    Maska perforowana
+                </div>
+                <div style="width:790px; background-color:#dedede; padding:5px;">
+                    występowała w pierwszych monitorach CRT, została opracowana przez firmę IBM. Jej największą wadą jest zbyt duża powierzchnia, co wpływa na obniżenie jasności obrazu
+                </div>    
+                 
+                <br />
+                 
+                <div style="width:790px; background-color:#314004;padding:5px;font-weight:700;color:#fff;">
+                    Maska szczelinowa
+                </div>
+                <div style="width:790px; background-color:#dedede; padding:5px;">
+                    została po raz pierwszy zastosowana w kineskopach NEC Cromaclear. Stanowi kompromis między dwoma poprzednimi rozwiązaniami - kosztem nieznacznej utraty jakości obrazu zrezygnowano z dwóch drutów stabilizujących. Również koszt produkcji tej maski jest dużo niższy
+                </div>    
+                 
+                <br />
+                 
+                <div style="width:790px; background-color:#314004;padding:5px;font-weight:700;color:#fff;">
+                    Maska szczelinowo-perforowana
+                </div>
+                <div style="width:790px; background-color:#dedede; padding:5px;">
+                    częstotliwość z jaką monitor rysuje pojedynczą linię obrazu, mierzona w kilohercach [kHz]
+                </div>    
+                 
+            </div>
+        </div>
+        <div id="footerer">
+            <div id=""></div>
+            <div id=""></div>
+        </div>
+        <div id="footer">&copy;2022 Gabriel Klonowski - Monitory </div>
+    </body>
+</html>
+<!--<a href="kimjestem.html" target="_blank" class="medialink"></a>-->

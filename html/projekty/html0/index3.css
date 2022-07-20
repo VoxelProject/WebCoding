@@ -1,0 +1,117 @@
+body{
+    background-color: #575757;   
+    font-family: 'Lato', sans-serif;
+}
+#Container{
+    /*background-color: white;*/
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo{
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 44px;
+    letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+}
+#menu{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #949494;
+    margin-top: 20px;
+    padding: 10px;
+}
+#topbar{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #208574;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: 170px;
+}
+#BARL{
+    float: left;
+    padding: 20px;
+    width: 138px;
+    text-align: center;
+    border-right: 2px dotted #cccccc;
+}
+#BARR{
+    float: left;
+    padding: 20px;
+    width: 760px;
+    font-size: 20px;
+    text-align: justify;
+}
+#sidebar{
+    font-family: 'Roboto Condensed', sans-serif;
+    float: left;
+    width: 148px;
+    min-height: 620px;
+    padding: 20px;
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 18px;
+    border-right: 2px dotted white;
+}
+#content{
+    float: left;
+    padding: 40px;
+    width: 730px;
+    background-color: #dedede;
+    min-height: 580px;
+    text-align: justify;
+}
+#footer{
+    clear: both;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}
+.option{
+    float: left;
+    min-width: 50px;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    border-right: 2px dotted #b1b1b1;
+    opacity: 0.8;
+}
+.option:hover{
+    background-color: #3a3a3a;
+    cursor: pointer;
+    color: white;
+}
+.optionl{
+    font-size: 18px;
+    height: 25px;
+    padding: 10px;
+    border-bottom: 2px dotted #444444;
+}
+.optionl:hover{
+    background-color: #f36742;
+    color: white;
+    cursor: pointer;
+}
+/* 
+   font-family: 'Lato', sans-serif;
+
+    font-family: 'Roboto Condensed', sans-serif;
+
+    font-family: 'Ubuntu', sans-serif;
+    */
+.bigtitle{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+}
+.doted{
+    height: 5px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px dotted #444444;
+}

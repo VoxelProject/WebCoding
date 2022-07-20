@@ -1,0 +1,113 @@
+body{
+  background-color: #575757;   
+  font-family: 'Lato', sans-serif;
+}
+#Container{
+  /*background-color: white;*/
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4133;
+}
+#logo{
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 44px;
+  letter-spacing: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 900;
+}
+#menu{
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #949494;
+  margin-top: 20px;
+  padding: 10px;
+}
+#bar{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#sidebar{
+  font-family: 'Roboto Condensed', sans-serif;
+  float: left;
+  width: 148px;
+  min-height: 3829px;
+  padding: 20px;
+  background-color: lightgrey;
+  text-align: center;
+  font-size: 18px;
+  border-right: 2px dotted white;
+}
+#content{
+  float: left;
+  padding: 40px;
+  width: 730px;
+  background-color: #dedede;
+  min-height: 580px;
+  text-align: justify;
+}
+#footer{
+  clear: both;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+#stopka{
+  float: right;
+  padding: 15px;
+  font-size: 18px;
+  border-top: 2px dotted white;
+  width: 780px;
+  height: 24px;
+  background-color: lightgrey;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+a:link{
+  color: #ffffff;
+}
+a:visited{
+  color: #ffffff;
+}
+a:hover{
+  color: red;
+}
+.option{
+  float: left;
+  min-width: 50px;
+  height: 25px;
+  font-size: 18px;
+  padding: 10px;
+  border-right: 2px dotted #b1b1b1;
+  opacity: 0.8;
+}
+.option:hover{
+  background-color: #3a3a3a;
+  cursor: pointer;
+  color: white;
+}
+.optionl{
+  font-size: 18px;
+  height: 25px;
+  padding: 10px;
+  border-bottom: 2px dotted #444444;
+}
+.optionl:hover{
+  background-color: #f36742;
+  color: white;
+  cursor: pointer;
+}
+.bigtitle{
+  font-family: 'Oswald', sans-serif;
+  font-size: 600;
+  font-size: 60px;
+}
+.doted{
+  height: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px dotted #444444;
+}
