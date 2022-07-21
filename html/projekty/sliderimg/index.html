@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+  <head>    
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Photo</title>
+    <meta name="description" content="Ta stroma ma slider zrobiony w vanilla js"/>
+    <meta name="keywords" content="Vanilla JS" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="slider">
+        <div id="top-row">
+          <img class="arrow arrow-left" id="arrow-left" src="./img/arrow-left.png" alt="poprzednie zdjęcie" />
+          <div id="slides-container">
+            <img alt="patrzący się na nas kot" id="slide1" class="slide active" src="./img/photos/photo1.jpg"/>
+            <img alt="przeciągający się kot" id="slide2" class="slide" src="./img/photos/photo2.jpg" />
+            <img alt="zdjęcie kota przykrytego kocem" id="slide3" class="slide" src="./img/photos/photo3.jpg" />
+          </div>
+          <img class="arrow arrow-right" id="arrow-right" src="./img/arrow-right.png" alt="następne zdjęcie" />
+        </div>
+        <div id="bottom-row">
+          <div id="dots">
+            <div id="dot1" class="dot"></div>
+            <div id="dot2" class="dot"></div>
+            <div id="dot3" class="dot"></div>
+          </div>
+        </div>
+      </div> 
+    <main>
+  </body>
+</html>
