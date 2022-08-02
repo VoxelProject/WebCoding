@@ -1,33 +1,44 @@
-﻿<!--TODO: caniuse.com -->
+﻿<!--TODO caniuse.com -->
 <!DOCTYPE html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>glassmorphism - vanilla</title>
     <meta name="description" content="To stroma zrobiona na glassmorphism" />
     <meta name="keywords" content="glassmorphism, vanilla" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script defer src="main.js"></script>
   </head>
   <body>
     <div class="bg">
-      <img class="bg__img bg__img--button" src="./img/button.png" alt="" />
-      <img src="./img/dots.png" alt="" class="bg__img bg__img--dots" />
       <img
+        class="bg__img bg__img--button"
+        src="./img/button.png"
+        aria-hidden="true"
+      />
+      <img
+        src="./img/dots.png"
+        aria-hidden="true"
+        class="bg__img bg__img--dots"
+      />
+      <img
+        aria-hidden="true"
         src="./img/logo-question-mark.png"
-        alt=""
         class="bg__img bg__img--logo"
       />
     </div>
     <div class="container">
-      <div class="logo"><img src="./img/logo-question-mark.png" alt="" /></div>
+      <div class="logo">
+        <img aria-hidden="true" src="./img/logo-question-mark.png" />
+      </div>
       <header>
         <h1>Zaczynamy programować!</h1>
         <p>
           Całoroczny plan nauki dla stawiających pierwsze kroki w programowaniu
           od twórców kanału YouTube
-          <a href="https://jakzaczacprogramowac.pl" class="bold"
+          <a tabindex="0" href="https://jakzaczacprogramowac.pl" class="bold"
             >Jak zacząć programować?</a
           >
         </p>
@@ -67,9 +78,29 @@
           </p>
 
           <p>Pokażemy Ci czego warto się uczyć!</p>
-          <button>Zapisuję się!</button>
+          <button tabindex="0" class="button" id="submit">Zapisuję się!</button>
         </section>
       </main>
+    </div>
+    <div class="mask hidden">
+      <div class="window">
+        <h1>Plan nauki programowania!</h1>
+        <p>Zostaw swój e-mail, abyśmy mogli pozostać w kontakcie.</p>
+        <p>
+          Co dwa tygodnie dostaniesz maila, który pomoże Ci postawić pierwsze
+          kroki w programowaniu!
+        </p>
+        <input tabindex="0" type="email"></input>
+        <button tabindex="0">Zapisuję się!</button>
+        <p>
+          Zapisując się do newslettera wyrażasz zgodę na otrzymanie informacji o
+          nowościach, promocjach, produktach i usługach zaczynamyprogramowac.pl i
+          jakzaczacprogramowac.pl. Administratorem twoich danych jest Kacper
+          Sokołowski z siedzibą w Krakowie przy ulicy os. Bohaterów Września 1A/C.
+          Twoje dane będą przetwarzane do celów związanych z wysyłką newslettera.
+        </p>
+        <button aria-label="zamknij okno zapisu" tabindex="0" class="window__close">X</button>
+      </div>
     </div>
   </body>
 </html>
