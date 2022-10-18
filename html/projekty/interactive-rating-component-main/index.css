@@ -1,0 +1,87 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightgrey: hsl(217, 12%, 63%);
+  --mediumgrey: hsl(216, 12%, 54%);
+  --darkgrey: hsl(213, 20%, 18%);
+  --verydarkgrey: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  bottom: 15px;
+  position: fixed;
+  margin-top: 20px;
+}
+body {
+  font-weight: 400;
+  font-family: "Overpass", sans-serif;
+  font-size: 18px;
+  background: rgb(216, 209, 8);
+  color: var(--white);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.lol {
+  display: flex;
+  justify-content: space-evenly;
+}
+.lol > div {
+  background: var(--darkgrey);
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  color: var(--lightgrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+#vote__button {
+  border: 0;
+  color: white;
+  background: var(--orange);
+  font-weight: 400;
+  font-family: "Overpass", sans-serif;
+  font-size: 18px;
+  width: 100%;
+}
+#star {
+  aspect-ratio: 1 / 1;
+  width: 40px;
+  background: var(--darkgrey);
+  display: flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#star__item {
+  background:no-repeat url(images/icon-star.svg);
+  width: 17px;
+  height: 16px;
+}
+.vote > p {
+  color: var(--lightgrey);
+}
+.vote {
+  background: var(--verydarkgrey);
+  border-radius: 34px;
+  width: 396px;
+  height: 505px;
+  padding: 0px 65px 0px 45px;
+}
