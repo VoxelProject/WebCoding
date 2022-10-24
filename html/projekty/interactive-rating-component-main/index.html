@@ -27,22 +27,31 @@
     />
   </head>
   <body>
-    <section class="vote">
+    <h1>The rating component</h1>
+    <section id="vote" class="vote display">
       <div id="star"><div id="star__item"></div></div>
-      <h1>How did we do?</h1>
+      <a class="title">How did we do?</a>
       <p>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
+        Please let us know how we did with your support<br />
+        request. All feedback is appreciated to help us<br />
+        improve our offering!
       </p>
       <div class="lol">
         <!-- div[id="$"]{$}*5 -->
-        <div id="1">1</div>
-        <div id="2">2</div>
-        <div id="3">3</div>
-        <div id="4">4</div>
-        <div id="5">5</div>
+        <button id="1">1</button><button id="2">2</button
+        ><button id="3">3</button><button id="4">4</button
+        ><button id="5">5</button>
       </div>
-      <button id="vote__button">Subject</button>
+      <button id="vote__button">SUBMIT</button>
+    </section>
+    <section id="thankyou" class="vote">
+      <div class="select__img"></div>
+      <div class="select"><a>You selected 4 out of 5</a></div>
+      <a class="title">Thank you!</a>
+      <p>
+        We appreciate you taking the time to give a rating.<br />If you ever
+        need more support, don't hesitate to<br />get in touch!
+      </p>
     </section>
     <footer class="attribution">
       Challenge by

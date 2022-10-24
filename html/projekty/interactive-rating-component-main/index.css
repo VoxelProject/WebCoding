@@ -1,5 +1,5 @@
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
   width: 100%;
 }
@@ -7,12 +7,14 @@
   color: hsl(228, 45%, 44%);
 }
 :root {
-  --white: hsl(0, 0%, 100%);
-  --lightgrey: hsl(217, 12%, 63%);
-  --mediumgrey: hsl(216, 12%, 54%);
-  --darkgrey: hsl(213, 20%, 18%);
-  --verydarkgrey: hsl(216, 12%, 8%);
-  --orange: hsl(25, 97%, 53%);
+  --white: rgb(255, 255, 255);
+  --lightgrey: rgb(149, 158, 172);
+  --mediumgrey: rgb(50 55 67);
+  --darkgreyv2: rgb(40 46 61);
+  --darkgrey: rgb(18 19 21);
+  --verydarkgrey: rgb(20, 21, 25);
+  --orange: rgb(251, 116, 19);
+  --green: #68dc03;
 }
 * {
   margin: 0;
@@ -27,7 +29,7 @@ body {
   font-weight: 400;
   font-family: "Overpass", sans-serif;
   font-size: 18px;
-  background: rgb(216, 209, 8);
+  background: var(--verydarkgrey);
   color: var(--white);
   width: 100vw;
   height: 100vh;
@@ -39,49 +41,121 @@ body {
 }
 .lol {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 100%;
 }
-.lol > div {
-  background: var(--darkgrey);
-  width: 20px;
+.lol > button {
+  background: var(--mediumgrey);
+  width: 64px;
   aspect-ratio: 1 / 1;
   color: var(--lightgrey);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   border-radius: 100%;
+  font-size: 21px;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+:focus-visible {
+  outline: var(--green) solid 3px;
+}
+.lol > button:hover {
+  background: var(--lightgrey);
+  color: var(--white);
 }
 #vote__button {
   border: 0;
-  color: white;
+  color: var(--white);
   background: var(--orange);
   font-weight: 400;
   font-family: "Overpass", sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   width: 100%;
+  height: 50px;
+  margin: 29px 0 0 0;
+  border-radius: 35px;
+  letter-spacing: 2.7px;
 }
 #star {
   aspect-ratio: 1 / 1;
-  width: 40px;
-  background: var(--darkgrey);
+  width: 52px;
+  background: var(--mediumgrey);
   display: flex;
   border-radius: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  margin: 44px 0 43px 0;
+  flex-direction: column;
 }
 #star__item {
-  background:no-repeat url(images/icon-star.svg);
+  background: no-repeat url(images/icon-star.svg);
   width: 17px;
   height: 16px;
 }
+.vote > * {
+  overflow: hidden;
+}
+h1 {
+  position: absolute;
+  top: 10px;
+  width: 100vw;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+}
+.title {
+  font-size: 1.85em;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+.select {
+  color: var(--orange);
+  background: var(--mediumgrey);
+  font-weight: 400;
+  border-radius: 20px;
+  width: 240px;
+  height: 20px;
+  text-align: center;
+}
+#thankyou > p {
+  font-size: 20px;
+  text-align: center;
+  transform: translateX(-7px);
+  margin: 14px 0 0 0;
+}
+.select__img {
+  width: 162px;
+  background: no-repeat url(images/illustration-thank-you.svg);
+  aspect-ratio: 3/2;
+  transform: scale(1.2);
+  margin: 69px 0 0 0;
+}
 .vote > p {
   color: var(--lightgrey);
+  margin: 19px 0 31px 0;
+  font-size: 19px;
+  line-height: 29px;
+  letter-spacing: -0.7px;
 }
 .vote {
-  background: var(--verydarkgrey);
+  background: radial-gradient(
+    at 267px -104px,
+    var(--darkgreyv2) 10%,
+    var(--darkgrey) 146%
+  );
+  overflow: hidden;
   border-radius: 34px;
-  width: 396px;
-  height: 505px;
-  padding: 0px 65px 0px 45px;
+  width: 424.5px;
+  height: 513px;
+  padding: 0px 46px 0px 43px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+}
+.display {
+  display: none;
 }
