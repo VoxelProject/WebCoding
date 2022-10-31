@@ -9,7 +9,8 @@ const VOTE__3 = document.querySelector("#re3");
 const VOTE__4 = document.querySelector("#re4");
 const VOTE__5 = document.querySelector("#re5");
 const LSKEY = "rating";
-let numberofVote = null;
+const SELECTLSKEY = "selected";
+let numberofVote = localStorage.getItem(SELECTLSKEY) || null;
 const showVotingSystem = () => {
   if (VOTE.classList.contains("display")) {
     VOTE.classList.remove("display");
@@ -59,11 +60,9 @@ const voteClick = (e) => {
       .querySelector("#re" + id)
       .classList.contains("vote__button--interacted")
   ) {
-    classVoteElement(1, "remove");
-    classVoteElement(2, "remove");
-    classVoteElement(3, "remove");
-    classVoteElement(4, "remove");
-    classVoteElement(5, "remove");
+    for (let i = 1; i <= 5; i++) {
+      classVoteElement(i, "remove");
+    }
     classVoteElement(id, "add");
     numberofVote = Number(id);
   } else {
@@ -75,12 +74,13 @@ const renderScore = () => {
   SELECT.innerHTML = "You selected " + numberofVote + " out of 5";
 };
 const buttonClick = () => {
-  if (numberofVote === null) {
+  if (!(numberofVote === null)) {
+    localStorage.setItem(SELECTLSKEY, numberofVote);
     renderScore();
     hiddenVoteSystem();
     localStorage.setItem(LSKEY, true);
   } else {
-    console.error("ser");
+    console.error("no select value");
   }
 };
 for (let i = 1; i <= 5; i++) {
@@ -94,7 +94,7 @@ const init = () => {
   } else {
     showVotingSystem();
   }
-  console.log("alos");
+  renderScore();
 };
 init();
 // FIXME:classVoteElement(2, "remove");

@@ -199,7 +199,9 @@ aside {
   position: relative;
   border: none;
 }
-
+#localStorage--reset:hover {
+  background-color: var(--lightgrey);
+}
 #localStorage--reset:after {
   position: absolute;
   top: 0;
