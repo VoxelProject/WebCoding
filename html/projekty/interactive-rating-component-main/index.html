@@ -28,7 +28,7 @@
   </head>
   <body>
     <h1>The rating component</h1>
-    <section id="vote" class="vote display">
+    <section id="vote" class="vote">
       <div id="star"><div id="star__item"></div></div>
       <a class="title">How did we do?</a>
       <p>
@@ -37,22 +37,42 @@
         improve our offering!
       </p>
       <div class="lol">
-        <!-- div[id="$"]{$}*5 -->
-        <button id="1">1</button><button id="2">2</button
-        ><button id="3">3</button><button id="4">4</button
-        ><button id="5">5</button>
+        <!-- button[aria-label="rate help on $"class="vote__button"id="re$"]{$}*5 -->
+        <button aria-label="rate help on 1" class="vote__button" id="re1">
+          1
+        </button>
+        <button aria-label="rate help on 2" class="vote__button" id="re2">
+          2
+        </button>
+        <button aria-label="rate help on 3" class="vote__button" id="re3">
+          3
+        </button>
+        <button aria-label="rate help on 4" class="vote__button" id="re4">
+          4
+        </button>
+        <button aria-label="rate help on 5" class="vote__button" id="re5">
+          5
+        </button>
       </div>
-      <button id="vote__button">SUBMIT</button>
+      <button id="vote__submit-button">SUBMIT</button>
     </section>
-    <section id="thankyou" class="vote">
-      <div class="select__img"></div>
-      <div class="select"><a>You selected 4 out of 5</a></div>
-      <a class="title">Thank you!</a>
-      <p>
-        We appreciate you taking the time to give a rating.<br />If you ever
-        need more support, don't hesitate to<br />get in touch!
-      </p>
+    <section id="thankyou" class="vote display">
+      <div>
+        <div class="select__img"></div>
+        <div class="select"><a>Błąd ładowania javascript</a></div>
+        <a class="title">Thank you!</a>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
     </section>
+    <aside>
+      <button
+        aria-label="click to reset screen's elements"
+        id="localStorage--reset"
+      ></button>
+    </aside>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -61,5 +81,6 @@
       <a target="_blank" href="https://github.com/VoxelProject">VoxelProject</a
       >.
     </footer>
+    <script defer src="app.js"></script>
   </body>
 </html>
