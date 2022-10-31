@@ -52,6 +52,9 @@ const storadgeReset = () => {
   localStorage.clear();
   showVotingSystem();
   numberofVote = null;
+  for (let i = 1; i <= 5; i++) {
+    classVoteElement(i, "remove");
+  }
 };
 const voteClick = (e) => {
   const id = e.srcElement.innerText;
@@ -97,4 +100,3 @@ const init = () => {
   renderScore();
 };
 init();
-// FIXME:classVoteElement(2, "remove");
