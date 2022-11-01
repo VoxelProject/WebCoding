@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,45 +28,46 @@
   </head>
   <body>
     <h1>The rating component</h1>
-    <section id="vote" class="vote">
-      <div id="star"><div id="star__item"></div></div>
-      <a class="title">How did we do?</a>
-      <p>
-        Please let us know how we did with your support<br />
-        request. All feedback is appreciated to help us<br />
-        improve our offering!
-      </p>
-      <div class="lol">
-        <!-- button[aria-label="rate help on $"class="vote__button"id="re$"]{$}*5 -->
-        <button aria-label="rate help on 1" class="vote__button" id="re1">
-          1
-        </button>
-        <button aria-label="rate help on 2" class="vote__button" id="re2">
-          2
-        </button>
-        <button aria-label="rate help on 3" class="vote__button" id="re3">
-          3
-        </button>
-        <button aria-label="rate help on 4" class="vote__button" id="re4">
-          4
-        </button>
-        <button aria-label="rate help on 5" class="vote__button" id="re5">
-          5
-        </button>
-      </div>
-      <button id="vote__submit-button">SUBMIT</button>
-    </section>
-    <section id="thankyou" class="vote display">
-      <div>
-        <div class="select__img"></div>
-        <div class="select"><a>Błąd ładowania javascript</a></div>
-        <a class="title">Thank you!</a>
+    <main>
+      <div id="vote" class="vote">
+        <div id="star"><div id="star__item"></div></div>
+        <a class="title">How did we do?</a>
         <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch!
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
         </p>
+        <div class="lol">
+          <!-- button[aria-label="rate help on $"class="vote__button"id="re$"]{$}*5 -->
+          <button aria-label="rate help on 1" class="vote__button" id="re1">
+            1
+          </button>
+          <button aria-label="rate help on 2" class="vote__button" id="re2">
+            2
+          </button>
+          <button aria-label="rate help on 3" class="vote__button" id="re3">
+            3
+          </button>
+          <button aria-label="rate help on 4" class="vote__button" id="re4">
+            4
+          </button>
+          <button aria-label="rate help on 5" class="vote__button" id="re5">
+            5
+          </button>
+        </div>
+        <button id="vote__submit-button">SUBMIT</button>
       </div>
-    </section>
+      <section id="thankyou" class="vote display">
+        <div>
+          <div class="select__img"></div>
+          <div class="select"><a>Błąd ładowania javascript</a></div>
+          <a class="title">Thank you!</a>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </section>
+    </main>
     <aside>
       <button
         aria-label="click to reset screen's elements"
