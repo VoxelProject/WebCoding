@@ -1,0 +1,192 @@
+:root {
+  --lightredforCTAtext: hsl(356, 100%, 66%);
+  --verylightredforCTAhoverbackground: hsl(355, 100%, 74%);
+  --verydarkblueforheadings: hsl(208, 49%, 24%);
+  --whitefortext: hsl(0, 0%, 100%);
+  --grayishblueforfootertext: hsl(240, 2%, 79%);
+  --verydarkgrayishblueforbody: hsl(207, 13%, 34%);
+  --verydarkblackblueforfooterbackground: hsl(240, 10%, 16%);
+  --gradientverylightred: hsl(13, 100%, 72%);
+  --gradientlightred: hsl(353, 100%, 62%);
+  --gradientverydarkgrayblue: hsl(237, 17%, 21%);
+  --gradientverydarkdesaturatedblue: hsl(237, 23%, 32%);
+  --green: green;
+  --lightred: hsl(8, 100%, 89%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  display: block;
+  /* overflow-x: auto;
+  overflow-y: auto; */
+}
+:focus-visible,
+:focus {
+  outline: 4px solid var(--green);
+  mix-blend-mode: normal;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  font-family: "Overpass", sans-serif;
+  font-size: 20px;
+}
+head,
+head > * {
+  display: none;
+}
+/* Sekcja header */
+body > header#topbar {
+  display: none;
+}
+/* Sekcja main */
+body > div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+main {
+  font-family: "Overpass", sans-serif;
+  max-width: 1400px;
+  min-width: 800px;
+}
+/* main header */
+#img {
+  background: url(./images/bg-pattern-intro-desktop.svg) no-repeat;
+  background-size: 2760px;
+  background-position: -375px -1168px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 5em;
+  display: flex;
+  justify-content: center;
+}
+main > header {
+  background: linear-gradient(
+    90deg,
+    var(--gradientverylightred),
+    var(--gradientlightred)
+  );
+  color: var(--lightred);
+  border-radius: 0 0 0 5em;
+  font-size: 20px;
+}
+#header-container {
+  padding-top: 200px;
+  padding-bottom: 78px;
+}
+h1#title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  color: var(--whitefortext);
+}
+p#motd {
+  text-align: center;
+  padding-bottom: 27px;
+}
+/* main header buttons */
+#main-header-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+#main-header-buttons > button {
+  background: none;
+  border: none;
+  /* Buttons so responsible(scalling) also width and height build proportions */
+  width: 126px;
+  height: 46px;
+  margin: 1em 0.5em;
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.03em;
+}
+button#startprojectforfree {
+  background: var(--whitefortext);
+  color: var(--lightredforCTAtext);
+  -webkit-text-fill-color: black;
+  mix-blend-mode: lighten;
+}
+button#startprojectforfree:focus-visible,
+button#startprojectforfree:focus {
+  outline: 4px solid var(--green);
+  color: var(--lightredforCTAtext);
+  -webkit-text-fill-color: var(--lightredforCTAtext);
+  mix-blend-mode: normal;
+}
+button#learnmore {
+  color: var(--whitefortext);
+  border: 2px var(--whitefortext) solid;
+}
+/* main conteiner's */
+main > div {
+  color: var(--verydarkgrayishblueforbody);
+  font-size: 15px;
+  line-height: 25px;
+}
+h2 {
+  color: var(--verydarkblueforheadings);
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+h3 {
+  color: var(--verydarkblueforheadings);
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 24px;
+}
+#designed-for-the-future {
+  text-align: center;
+  padding-top: 148px;
+}
+#designed-for-the-future2 {
+  display: grid;
+  padding: 104px 148px;
+  grid-template: 1fr/1fr 1fr;
+}
+#introducing-an-extensible-editor-indentation {
+  padding-bottom: 66px;
+}
+#designed-for-the-future-aside {
+  max-width: 472px;
+  grid-area: 1/1;
+}
+/* Sekcja footer */
+body > footer {
+  width: 100%;
+  background: var(--verydarkblackblueforfooterbackground);
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* body {
+  position: static;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+}
+#topbar {
+  display: none;
+}
+body > div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+} */
