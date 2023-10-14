@@ -25,8 +25,13 @@
   outline: 4px solid var(--green);
   mix-blend-mode: normal;
 }
+style,
+script {
+  display: none;
+}
 head,
-head > * {
+head > *,
+head * {
   display: none;
 }
 body {
@@ -134,4 +139,28 @@ p {
 }
 #introducing-an-extensible-editor-indentation {
   margin-bottom: 66px;
+}
+/* sl */
+#state-of-the-art-infrastructure-main {
+  background: linear-gradient(
+    45deg,
+    var(--gradientverydarkgrayblue),
+    var(--gradientverydarkdesaturatedblue)
+  );
+  height: 350px;
+  display: grid;
+  padding: 104px 148px;
+  grid-template: 1fr/1fr 1fr;
+  color: var(--whitefortext);
+}
+#state-of-the-art-infrastructure-main-main {
+  max-width: 472px;
+  grid-area: 1/2;
+}
+/* cmp */
+#computer-logo-main {
+}
+#designed-for-the-future-aside {
+  max-width: 472px;
+  grid-area: 1/1;
 }
