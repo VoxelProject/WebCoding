@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAYORI FANCLUB<3</title>
+    <style>
+      body {
+        background-image: url("dokidokibackround.png"); /* Obrazek z białymi kropkami */
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .hidden {
+        display: none !important;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .content > button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #c834db7a;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px #0000001a;
+      }
+      .reaction > img {
+        height: 150vh;
+        margin-top: -180px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <embed
+      src="Doki_Doki_Literature_Club_Your_Reality_No_Vocals_OST.mp3"
+      loop="true"
+      autostart="true"
+      width="0"
+      height="0"
+    /> --><audio autoplay>
+      <source
+        src="Doki_Doki_Literature_Club_Your_Reality_No_Vocals_OST.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="content">
+      <button class="button">! BUY DOKI DOKI !</button>
+    </div>
+    <div class="reaction hidden">
+      <img src="./Say6.png" alt="Anime dziewczynka" />
+    </div>
+    <script>
+      document.querySelector(".button").addEventListener("click", () => {
+        document.querySelector(".content").classList.add("hidden");
+        document.querySelector(".reaction").classList.remove("hidden");
+        setTimeout(() => {
+          document.querySelector(".reaction").classList.add("hidden");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

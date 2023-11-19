@@ -1,0 +1,164 @@
+:root {
+  --lightredforCTAtext: hsl(356, 100%, 66%);
+  --verylightredforCTAhoverbackground: hsl(355, 100%, 74%);
+  --verydarkblueforheadings: hsl(208, 49%, 24%);
+  --whitefortext: hsl(0, 0%, 100%);
+  --grayishblueforfootertext: hsl(240, 2%, 79%);
+  --verydarkgrayishblueforbody: hsl(207, 13%, 34%);
+  --verydarkblackblueforfooterbackground: hsl(240, 10%, 16%);
+  --gradientverylightred: hsl(13, 100%, 72%);
+  --gradientlightred: hsl(353, 100%, 62%);
+  --gradientverydarkgrayblue: hsl(237, 17%, 21%);
+  --gradientverydarkdesaturatedblue: hsl(237, 23%, 32%);
+  --green: green;
+  --lightred: hsl(8, 100%, 89%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  display: block;
+  /* overflow-x: auto;
+      overflow-y: auto; */
+}
+:focus-visible,
+:focus {
+  outline: 4px solid var(--green);
+  mix-blend-mode: normal;
+}
+style,
+script {
+  display: none;
+}
+head,
+head > *,
+head * {
+  display: none;
+}
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 20px;
+  background-color: red;
+}
+/* content */
+nav {
+  display: flex;
+  grid-area: 1/2;
+}
+header {
+  grid-template: 36vh/10% 1fr auto auto;
+  /* display: grid; */
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+}
+button#header-singup {
+  grid-area: 1/3;
+}
+button#header-login {
+  grid-area: 1/4;
+}
+#logoimage {
+  grid-area: 1/1;
+}
+/* main */
+main {
+  font-family: "Overpass", sans-serif;
+  max-width: 1400px;
+  min-width: 800px;
+}
+#modern-publish {
+  background: linear-gradient(
+    90deg,
+    var(--gradientverylightred),
+    var(--gradientlightred)
+  );
+  border-radius: 0 0 0 90px;
+}
+h1 {
+  color: var(--whitefortext);
+  /* margin: auto; */
+  text-align: center;
+  font-size: 52px;
+  /* font-family: 'Ubuntu', sans-serif; */
+  padding-top: 187px;
+  font-weight: 600;
+}
+#grow {
+  text-align: center;
+  font-size: 18px;
+  color: var(--grayishblueforfootertext);
+  padding-top: 14px;
+}
+#start-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 36px 0 136px 0;
+}
+button#learn-more {
+  height: 44px;
+  width: 110px;
+  border: 2px solid var(--whitefortext);
+  border-radius: 25px;
+  background: 0;
+  color: var(--whitefortext);
+  font-weight: 900;
+  font-size: 12.5px;
+}
+button#learn-more:focus,
+button#learn-more:focus-visible {
+  outline: 4px solid var(--green);
+  color: var(--lightredforCTAtext);
+  -webkit-text-fill-color: var(--lightredforCTAtext);
+  mix-blend-mode: normal;
+}
+#start-free {
+  margin-right: 15px;
+  height: 44px;
+  width: 110px;
+  border: 0;
+  border-radius: 25px;
+  background: var(--whitefortext);
+  color: var(--lightredforCTAtext);
+  font-weight: 900;
+  font-size: 12.5px;
+}
+
+#designedforfuture-half {
+  margin: 0px 650px 0 145px;
+}
+#designedforfutureacapit {
+  margin: 135px 0 90px 0;
+  text-align: center;
+}
+h2 {
+  font-size: 33px;
+}
+#introducinganextensible {
+  margin-bottom: 30px;
+}
+#designedforfuture-half > p {
+  line-height: 24px;
+  margin-bottom: 65px;
+}
+#robustcontent {
+  margin-bottom: 22px;
+}
+p {
+  font-size: 15px;
+  color: var(--verydarkgrayishblueforbody);
+}
+h3 {
+  color: var(--verydarkblueforheadings);
+}
+main {
+  background-color: var(--whitefortext);
+}
+h2 {
+  color: var(--verydarkblueforheadings);
+}
+#freeopen {
+  margin-bottom: 22px;
+}
+#powerfultooling {
+  margin-bottom: 22px;
+}
