@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual</title>
+  </head>
+  <body>
+    <h1>Command Manual</h1>
+    <section>
+      <h2>Netplan Manual</h2>
+      <ul>
+        <li>nano /etc/netplan/00-installer-config.yaml</li>
+        <a>Otwieranie pliku</a>
+        <li>
+          enp0s8:<br />
+          <i>4 spacje</i> dhcp4: no<br />
+          <i>4 spacje</i> addresses: [10.20.10.0/24]
+        </li>
+        <a>ustawianie</a>
+        <li>netplan apply</li>
+        <a>aplikowanie</a>
+      </ul>
+    </section>
+    <section>
+      <h2>DHCP Manual</h2>
+      <ul>
+        <li>apt install isc-dhcp-server</li>
+        <a>zainstalowanie</a>
+        <li>systemctl status isc-dhcp-server</li>
+        <a>sprawdzenie czy nie działa</a>
+        <li>nano /etc/default/isc-dhcp-server</li>
+        <a>ustawianie interfejsu</a>
+        <li>nano /etc/dhcp/dhcpd.conf</li>
+        <a>ustawianie</a>
+        <li>
+          <ul>
+            <li>authoritative;</li>
+            <li>
+              subnet 10.20.10.0 netmask 255.255.255.0 {<br />
+              range 10.20.10.50 10.20.10.150;<br />
+              option domain-name "srv.wrl";<br />
+              option subnet-mask 255.255.255.0;<br />
+              option routers 10.20.10.15;<br />
+              }
+            </li>
+            <li>systemctl restart isc-dhcp-server</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>WWW Apache manual</h2>
+      <ul>
+        <li>apt -y install apache2</li>
+        <li>nano /etc/apache2/mods-enabled/dir.conf</li>
+        <ul>
+          <li>DirectoryIndex index.html index.htm</li>
+        </ul>
+        <li>nano /etc/apache2/apache2.conf</li>
+        <li>ServerName www.srv.world[70]</li>
+        <li>systemctl restart apache2&systemctl status apache2</li>
+        <li>adduser gebriel</li>
+        <li>addgroup grupa</li>
+        <li>usermod -a -G grupa gebriel</li>
+        <li></li>
+        <li>vi /etc/apache2/apache2.conf</li>
+        <li>mkdir -p /var/www/virtual.host/html</li>
+        <li>chown -R gebriel:gebriel /var/www/virtual.host/html</li>
+        <li>chmod -R 755 /var/www/virtual.host</li>
+        <li>nano /var/www/virtual.host/html/index.html</li>
+        <ul>
+          <li>
+            html<br />
+            head<br />
+            titleWitam virtual.host/title<br />
+            /head<br />
+            body<br />
+            h1To virtual.host na Ubuntu 20.04/h1<br />
+            /body<br />
+            /html
+          </li>
+        </ul>
+        <li>nano /etc/apache2/sites-available/virtual.host.conf</li>
+        <ul>
+          <li>
+            <VirtualHost *:80
+              ><br />
+              ServerName virtual.host<br />
+              ServerAlias virtual.host<br />
+              ServerAdmin webmaster@virtual.host<br />
+              DocumentRoot /var/www/virtual.host/html<br />
+              ErrorLog ${APACHE_LOG_DIR}/virtual.host.error.log<br />
+              CustomLog ${APACHE_LOG_DIR}/virtual.host.access.log combined<br />
+            </VirtualHost>
+          </li>
+        </ul>
+        <li>a2ensite virtual.host</li>
+        <li>systemctl reload apache2</li>
+        <li>a2dissite 000-default.conf</li>
+        <li>systemctl reload apache2</li>
+        <li>apache2ctl configtest</li>
+      </ul>
+    </section>
+    <section>
+      <h2>FTP Manual</h2>
+      <ul>
+        <li>apt -y install vsftpd</li><li>vi /etc/vsftpd.con</li><ul>
+        <li>write_enable=YES[31]<br/>
+            ascii_upload_enable=YES<br/>
+ascii_download_enable=YES<br/>
+chroot_local_user=YES<br/>
+chroot_list_enable=YES<br/>
+chroot_list_file=/etc/vsftpd.chroot_list<br/>
+ls_recurse_enable=YES<br/>
+local_root=public_html<br/>
+seccomp_sandbox=NO<br/>
+
+        </li>
+        
+      </ul>
+    </section>
+  </body>
+</html>
