@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sklep Internetowy</title>
+    <style>
+      /* Stylizacja ogólna */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      /* Nawigacja */
+      nav {
+        background-color: #444;
+        overflow: hidden;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        float: left;
+      }
+
+      nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        background-color: #555;
+      }
+
+      /* Sekcja produktów */
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        background-color: white;
+      }
+
+      .product {
+        border: 1px solid #ddd;
+        padding: 10px;
+        background-color: #fff;
+        text-align: center;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .product img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .product h2 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      .product p {
+        color: #888;
+      }
+
+      .product button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .product button:hover {
+        background-color: #218838;
+      }
+
+      /* Stopka */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Nagłówek strony -->
+    <header>
+      <h1>Sklep Internetowy</h1>
+    </header>
+
+    <!-- Pasek nawigacji -->
+    <nav>
+      <ul>
+        <li><a href="#">Strona główna</a></li>
+        <li><a href="#">Produkty</a></li>
+        <li><a href="#">O nas</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sekcja produktów -->
+    <section class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Produkt 1" />
+        <h2>Produkt 1</h2>
+        <p>Opis produktu 1</p>
+        <button>Dodaj do koszyka</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Produkt 2" />
+        <h2>Produkt 2</h2>
+        <p>Opis produktu 2</p>
+        <button>Dodaj do koszyka</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Produkt 3" />
+        <h2>Produkt 3</h2>
+        <p>Opis produktu 3</p>
+        <button>Dodaj do koszyka</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Produkt 4" />
+        <h2>Produkt 4</h2>
+        <p>Opis produktu 4</p>
+        <button>Dodaj do koszyka</button>
+      </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+      <p>&copy; 2024 Sklep Internetowy. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+  </body>
+</html>
