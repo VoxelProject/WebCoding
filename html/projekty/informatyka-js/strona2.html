@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie z funkcjami</title>
+    <style>
+      body {
+        color: wheat;
+        background: rgb(11, 86, 11);
+      }
+      #delta > a {
+        background: rgb(16, 8, 176);
+      }
+      #mz > a:nth-child(2) {
+        background: red;
+      }
+      #mz > a:nth-child(3) {
+        background: green;
+      }
+      #mz > a:nth-child(4) {
+        background: rgb(127, 15, 47);
+      }
+      #ww > a:nth-child(2) {
+        background: rebeccapurple;
+      }
+      #ww > a:nth-child(3) {
+        background: rgb(126, 23, 117);
+      }
+      #ww {
+        display: flex;
+        flex-direction: column;
+      }
+      #ww > a {
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Obliczenia równań kwadratowych</h1>
+    <form name="func" onsubmit="return liczenie(event)">
+      <label> Wpisz a <input type="text" name="a" /></label>
+      <label> Wpisz b <input type="text" name="b" /></label>
+      <label> Wpisz c <input type="text" name="c" /></label>
+      <input type="submit" value="Policz" />
+    </form>
+
+    <div id="odp">
+      <div id="delta">
+        <h2>Delta</h2>
+        <a>Delta</a>
+      </div>
+      <div id="mz">
+        <h2>Miejsca zerowe</h2>
+        <a>x1</a>
+        <a>x2</a>
+        <a>x</a>
+      </div>
+      <div id="ww">
+        <h2>Wzory Viet'a</h2>
+        <a>x1+x2=-b/a</a>
+        <a>x1*x2=c/a</a>
+      </div>
+    </div>
+
+    <script defer>
+      function liczenie(event) {
+        event.preventDefault();
+
+        let a = parseInt(document.forms["func"]["a"].value);
+        let b = parseInt(document.forms["func"]["b"].value);
+        let c = parseInt(document.forms["func"]["c"].value);
+
+        const dc_delta = document.querySelector("#delta > a");
+        const dc_x = document.querySelector("#mz > a:nth-child(4)");
+        const dc_x1 = document.querySelector("#mz > a:nth-child(2)");
+        const dc_x2 = document.querySelector("#mz > a:nth-child(3)");
+        const dc_v1 = document.querySelector("#ww > a:nth-child(2)");
+        const dc_v2 = document.querySelector("#ww > a:nth-child(3)");
+
+        if (isNaN(a) || isNaN(b) || isNaN(c) || a === 0) {
+          console.log("Proszę podać poprawne liczby.");
+          return false;
+        }
+
+        let delta = b ** 2 - 4 * a * c;
+        let x1, x2, x;
+
+        if (delta > 0) {
+          let pierwiastek = delta ** (1 / 2);
+          x1 = (-b - pierwiastek) / (2 * a);
+          x2 = (-b + pierwiastek) / (2 * a);
+        } else if (delta === 0) {
+          x = -b / (2 * a);
+        } else {
+          console.log("Równanie nie ma miejsc zerowych.");
+          return false;
+        }
+
+        if (dc_delta) dc_delta.textContent = "Delta: " + delta;
+        if (dc_x) dc_x.textContent = x !== undefined ? "x: " + x : "";
+        if (dc_x1) dc_x1.textContent = x1 !== undefined ? "x1: " + x1 : "";
+        if (dc_x2) dc_x2.textContent = x2 !== undefined ? "x2: " + x2 : "";
+
+        dc_v1.textContent =
+          "x1" + " + " + "x2" + " = " + -b + "/" + a + " = " + -b / a;
+        dc_v2.textContent =
+          "x1" + " ⋅ " + "x2" + " = " + c + "/" + a + " = " + c / a;
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

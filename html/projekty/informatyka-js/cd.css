@@ -1,0 +1,100 @@
+#math > a,
+#string > a,
+#data > a {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 4px 3px;
+  font-size: 20px;
+  font-family: monospace;
+  color: white;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+body {
+  background-color: #1a5e46;
+}
+#data,
+#math,
+#string {
+  margin: 30px 10px;
+  background-color: #0c2e22ba;
+  border-radius: 6px;
+  padding: 6px 8px;
+  backdrop-filter: blur(38px);
+}
+
+.bg-img {
+  position: absolute;
+}
+#s1 {
+  fill: white;
+  width: 200px;
+  aspect-ratio: 1/1;
+  animation: anim 15s infinite linear;
+}
+/* @keyframes anim {
+  0% {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  25% {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  50% {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+  75% {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+  }
+  100% {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+} */
+#s2 {
+  fill: white;
+  width: 400px;
+  aspect-ratio: 1/1;
+  right: 5%;
+  animation: rotate 40s infinite linear;
+  opacity: 70%;
+}
+/* @keyframes rotate {TODO:
+} */
+em {
+  display: inline;
+  background-color: black;
+  padding: 1px 8px;
+  border-radius: 7px;
+}
+#math > a:hover,
+#string > a:hover,
+#data > a:hover {
+  background: #1a5e46;
+}
+#conteiner {
+  position: fixed;
+  top: 60%;
+  right: 70px;
+  background: black;
+  color: white;
+  font-size: 38px;
+  font-family: system-ui;
+  width: 440px;
+  height: 230px;
+  border: 8px solid darkgoldenrod;
+  word-wrap: break-word;
+}
+.inw {
+  display: none;
+}
